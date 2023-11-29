@@ -31,9 +31,9 @@ function App() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        className="backdrop-blur-xl flex z-10 w-full fixed top-0 rounded-b-md border border-gray-600 items-center p-1  mr-1 shadow-lg "
+        className="backdrop-blur-xl flex z-10 w-full fixed top-0 rounded-b-md border border-gray-600 items-center p-1  mr-1 shadow-lg flex-1 flex-row justify-between"
       >
-        <div >
+        <div>
           <ModeToggle />
         </div>
 

@@ -75,15 +75,15 @@ export function MainPage() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        className="flex flex-col my-5 ml-2 mr-2 justify-center items-center "
+        className="flex flex-col  ml-2 mr-2 justify-center items-center "
       >
         <header className="header__main">
           <motion.div
             custom={3}
             variants={headerAnimation(0, 100)}
-            className="section__container header__container"
+            //className="section__container header__container"
           >
-            <h1 className="mb-8 scroll-m-20 text-8xl  sm:text-sm md:text-sm font-extrabold tracking-tight lg:text-5xl text-white text-center">
+            <h1 className="mb-8 scroll-m-20 text-4xl md:text-8xl font-extrabold tracking-tight text-white text-center">
               Комфортное место
               <br />
               для Вашего отдыха
