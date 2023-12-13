@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { headerAnimation } from "@/App";
 import { AlertComp } from "./alert";
 //import { CarouselComp } from "./carousel";

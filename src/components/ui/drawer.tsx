@@ -9,9 +9,13 @@ import ListItemButton from '@mui/joy/ListItemButton';
 import { Menu } from 'lucide-react';
 import "../../index.css";
 import { useTheme } from "@/components/ui/theme-provider";
+import {Navigate, useNavigate} from 'react-router-dom'
 
 
 export default function DrawerComp() {
+
+  const navigate = useNavigate();
+  
   const [open, setOpen] = React.useState(false);
 
   const { theme } = useTheme();
@@ -29,6 +33,40 @@ export default function DrawerComp() {
       setOpen(inOpen);
     };
 
+
+  const drawerItems = [
+    {
+      id: 1,
+      text: 'О нас',
+      page: '/aboutUs'
+    },
+    {
+      id: 2,
+      text: 'Номера',
+      page: '/rooms'
+    },
+    {
+      id: 3,
+      text: 'Местоположение',
+      page: '/location',
+    },
+    {
+      id: 4,
+      text: 'Услуги',
+      page: '/services'
+    },
+    {
+      id: 5,
+      text: 'Обратная связь',
+      page: '/feedback'
+    },
+    {
+      id: 6,
+      text: 'Контакты',
+      page: '/contacts'
+    },
+  ]
+
   return (
     <Box sx={{ }}>
       <Button size="icon" className='my-2'>
@@ -42,17 +80,17 @@ export default function DrawerComp() {
           onKeyDown={toggleDrawer(false)}
         >
           <List>
-            {['О нас', 'Номера', 'Местоположение', 'Услуги'].map((text) => (
-              <ListItem key={text}>
-                <ListItemButton>{text}</ListItemButton>
+            {drawerItems.slice(0, 4).map((item) => (
+              <ListItem key={item.id} onClick={() => navigate(item.page)}>
+                <ListItemButton>{item.text}</ListItemButton>
               </ListItem>
             ))}
           </List>
           <Divider />
           <List>
-            {['Обратная Связь', 'Контакты'].map((text) => (
-              <ListItem key={text}>
-                <ListItemButton>{text}</ListItemButton>
+            {drawerItems.slice(4).map((item) => (
+              <ListItem key={item.id}>
+                <ListItemButton>{item.text}</ListItemButton>
               </ListItem>
             ))}
           </List>

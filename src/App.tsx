@@ -33,10 +33,9 @@ function App() {
         whileInView="visible"
         className="backdrop-blur-xl flex z-10 w-full fixed top-0 rounded-b-md border border-gray-600 items-center p-1  mr-1 shadow-lg flex-1 flex-row justify-between"
       >
-        <div>
-          <ModeToggle />
-        </div>
-
+         <motion.div custom={1} variants={headerAnimation(100, 0)}>
+          <DrawerComp />
+        </motion.div>
         <div className="flex-grow text-center">
           <motion.p
             custom={2}
@@ -53,9 +52,9 @@ function App() {
             }}
           />
         </div>
-        <motion.div custom={1} variants={headerAnimation(100, 0)}>
-          <DrawerComp />
-        </motion.div>
+        <div>
+          <ModeToggle />
+        </div>
       </motion.div>
       <MainPage />
     </ThemeProvider>
