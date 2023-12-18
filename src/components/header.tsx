@@ -11,8 +11,8 @@ export function Header({ title }: { title: string }) {
       variants={animate(100, 0)}
       className="mt-2"
     >
-      <div className="my-6 text-center">
-        <h1 className="mb-4 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl shadow-sm">
+      <div className=" text-center">
+        <h1 className=" scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl shadow-sm">
           {parts.map((part, index) => {
             if (/^\d+$/.test(part)) {
               return (

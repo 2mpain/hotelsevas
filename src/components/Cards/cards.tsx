@@ -1,4 +1,4 @@
-import "../index.css";
+import "../../index.css";
 import { Button } from "@/components/readyToUse/button";
 import { motion } from "framer-motion";
 import { animate } from "../../utils/animate";
@@ -19,7 +19,7 @@ export function Cards() {
           Наши номера
         </h1>
       </motion.div>
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {cardsData.map((card, index) => (
           <div
             className="card bg-gray-50 dark:bg-slate-900 hover:bg-gray-100 dark:hover:bg-gray-950 dark:hover:text-black "
@@ -61,7 +61,7 @@ export function Cards() {
                 {card.services.map((service, serviceIndex) => (
                   <li
                     key={serviceIndex}
-                    className="flex space-x-2 items-center"
+                    className="flex space-x-2 items-center text-start"
                   >
                     <svg
                       className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
@@ -79,7 +79,7 @@ export function Cards() {
             </div>
 
             <Button
-              className="my-5 border-black text-black dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-black "
+              className="my-5 border-black text-black bg-white hover:bg-black hover:text-white"
               variant="outline"
             >
               Забронировать
