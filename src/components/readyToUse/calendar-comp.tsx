@@ -7,13 +7,13 @@ import { DateRange } from "react-day-picker";
 import ruLocale from "date-fns/locale/ru";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/readyToUse/button";
+import { Calendar } from "@/components/readyToUse/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/components/readyToUse/popover";
 
 export function DatePickerWithRange({
   className,

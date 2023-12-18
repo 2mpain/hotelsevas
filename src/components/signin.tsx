@@ -1,4 +1,4 @@
-import { headerAnimation } from "@/App";
+import { animate } from "../utils/animate";
 import { motion } from "framer-motion";
 
 export function SignIn() {
@@ -10,7 +10,7 @@ export function SignIn() {
             initial="hidden"
             animate="visible"
             custom={3}
-            variants={headerAnimation(-100, 0)}
+            variants={animate(-100, 0)}
             className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
           >
             Мы предлагаем лучшие условия
@@ -19,7 +19,7 @@ export function SignIn() {
             initial="hidden"
             animate="visible"
             custom={4}
-            variants={headerAnimation(-100, 0)}
+            variants={animate(-100, 0)}
             className="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"
           >
             Зарегестрируйтесь, чтобы всегда быть в курсе всех новых событий,
@@ -31,14 +31,14 @@ export function SignIn() {
             initial="hidden"
             animate="visible"
             custom={4}
-            variants={headerAnimation(-100, 0)}
+            variants={animate(-100, 0)}
             className="w-full lg:max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow-xl dark:bg-gray-800"
           >
             <motion.h2
               initial="hidden"
               animate="visible"
               custom={3}
-              variants={headerAnimation(100, 0)}
+              variants={animate(100, 0)}
               className="text-2xl font-bold text-gray-900 dark:text-white"
             >
               Регистрация

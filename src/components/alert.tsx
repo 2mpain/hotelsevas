@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/components/readyToUse/alert";
 import { Terminal } from "lucide-react";
 import { motion} from "framer-motion";
 

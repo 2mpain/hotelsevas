@@ -9,31 +9,18 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    
   },
   {
     path: "/aboutUs",
-    element: <div>aboutUs</div>
+    lazy: async () => {
+      const AboutUs = (await import ("./pages/AboutUs/AboutUs.tsx")).default;
+   return {
+    element: <AboutUs />
+   }
+    }
   },
-  {
-    path: "/rooms",
-    element: <div>rooms</div>
-  },
-  {
-    path: "/location",
-    element: <div>location</div>
-  },
-  {
-    path: "/services",
-    element: <div>services</div>
-  },
-  {
-    path: "/feedback",
-    element: <div>services</div>
-  },
-  {
-    path: "/contacts",
-    element: <div>services</div>
-  },
+
 
 
 ]);
@@ -43,3 +30,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
    <RouterProvider router={router} />
   </React.StrictMode>,
 )
+
+export default router;
