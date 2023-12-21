@@ -8,6 +8,7 @@ export function Cards() {
   return (
     <>
       <motion.div
+        id="rooms"
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.2 }}
@@ -19,7 +20,7 @@ export function Cards() {
           Наши номера
         </h1>
       </motion.div>
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-1" >
         {cardsData.map((card, index) => (
           <div
             className="card bg-gray-50 dark:bg-slate-900 hover:bg-gray-100 dark:hover:bg-gray-950 dark:hover:text-black "

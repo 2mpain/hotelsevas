@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export function SignIn() {
   return (
-    <section className="bg-gray-50 dark:bg-slate-900 rounded-b-lg shadow-lg">
+    <section className="bg-gray-50 dark:bg-slate-900 rounded-b-lg shadow-lg" id="signIn">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
         <motion.div className="flex flex-col justify-center">
           <motion.h1

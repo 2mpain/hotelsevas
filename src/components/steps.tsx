@@ -30,8 +30,8 @@ export const Stepper: React.FC<StepperProps> = ({ steps }) => {
   };
 
   return (
-    <>
-     <Header title="Заезд в 3 шага!" />
+    <div className="py-8">
+     <Header title="Заезд в 3 шага!" id="steps"/>
      <div className="flex-1 justify-center items-center">
       <motion.ol
         initial="hidden"
@@ -59,8 +59,8 @@ export const Stepper: React.FC<StepperProps> = ({ steps }) => {
           </motion.li>
         ))}
       </motion.ol>
-    </div>
-    </>
+      </div>
+      </div>
    
   );
 };

@@ -1,12 +1,11 @@
 import React from "react";
-import { Image } from "lucide-react";
 import { Header } from "../header";
 import { Button } from "../readyToUse/button";
 
 const ContactUs: React.FC = () => {
   return (
-    <div className="dark:bg-slate-900 bg-gray-600 text-white flex flex-col justify-center pt-10 min-h-screen w-screen">
-      <Header title="Свяжитесь с нами" />
+    <div className="bg-transparent text-white flex flex-col justify-center py-10 w-screen min-h-screen">
+      <Header title="Свяжитесь с нами" id="contactus" />
       <div className=" flex flex-col justify-center items-center">
         <form className="flex flex-col gap-4 mt-16 px-10 lg:mt-20 min-w-full lg:min-w-[500px]">
           <input

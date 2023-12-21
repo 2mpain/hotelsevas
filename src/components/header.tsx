@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { animate } from "../utils/animate";
 
-export function Header({ title }: { title: string }) {
+export function Header({ title, id }: { title: string; id: string }) {
   const parts = title.split(/(\d+)/);
 
   return (
     <motion.div
+      id={id}
       initial="hidden"
       whileInView="visible"
       variants={animate(100, 0)}

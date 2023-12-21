@@ -5,7 +5,7 @@ import { accordionData } from "../MainPage/data/data"
 
 export function CustomAccordion () {
     return(
-        <div className="w-full md:w-3/5">
+        <div className="w-full md:w-3/5 py-8" id="questions">
         <Accordion type="single" collapsible>
           {accordionData.map((item, index) => (
             <motion.div

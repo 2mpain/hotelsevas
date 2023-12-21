@@ -9,7 +9,7 @@ import ListItemButton from '@mui/joy/ListItemButton';
 import { Menu } from 'lucide-react';
 import "../../index.css";
 import { useTheme } from "@/components/readyToUse/theme-provider";
-import {Navigate, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 
 export default function DrawerComp() {
@@ -37,35 +37,44 @@ export default function DrawerComp() {
   const drawerItems = [
     {
       id: 1,
-      text: 'О нас',
-      page: '/aboutUs'
+      text: 'Вход',
+      page: 'signIn'
     },
     {
       id: 2,
-      text: 'Номера',
-      page: '/rooms'
+      text: 'Отзывы клиентов',
+      page: 'feedbacks'
     },
     {
       id: 3,
-      text: 'Местоположение',
-      page: '/location',
+      text: 'Ответы на вопросы',
+      page: 'questions',
     },
     {
       id: 4,
-      text: 'Услуги',
-      page: '/services'
+      text: 'Как к нам заехать?',
+      page: 'steps'
     },
     {
       id: 5,
-      text: 'Обратная связь',
-      page: '/feedback'
+      text: 'Наши номера',
+      page: 'rooms'
     },
     {
       id: 6,
-      text: 'Контакты',
-      page: '/contacts'
+      text: 'Обратная связь',
+      page: 'contactus'
     },
   ]
+
+  const handleMenuItemClick = (page: string) => {
+    console.log(page)
+    setOpen(false);
+    const section = document.getElementById(page);
+    if(section){
+      section.scrollIntoView({behavior: "smooth"})
+    }
+  }
 
   return (
     <Box sx={{ }}>
@@ -81,7 +90,7 @@ export default function DrawerComp() {
         >
           <List>
             {drawerItems.slice(0, 4).map((item) => (
-              <ListItem key={item.id} onClick={() => navigate(item.page)}>
+              <ListItem key={item.id} onClick={() => handleMenuItemClick(item.page)}>
                 <ListItemButton>{item.text}</ListItemButton>
               </ListItem>
             ))}
@@ -89,7 +98,7 @@ export default function DrawerComp() {
           <Divider />
           <List>
             {drawerItems.slice(4).map((item) => (
-              <ListItem key={item.id}>
+              <ListItem key={item.id} onClick={()=> handleMenuItemClick(item.page)}>
                 <ListItemButton>{item.text}</ListItemButton>
               </ListItem>
             ))}

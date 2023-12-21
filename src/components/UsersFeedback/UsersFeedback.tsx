@@ -13,9 +13,9 @@ export function UsersFeedback() {
         viewport={{ amount: 0.2 }}
         custom={1}
         variants={animate(-100, 0)}
-        className="flex justify-center items-center my-4"
+        className="flex justify-center items-center py-8"
       >
-        <Header title="Отзывы наших клиентов" />
+        <Header title="Отзывы наших клиентов" id="feedbacks" />
       </motion.div>
 
       <div className="grid mb-8  rounded-lg shadow-lg md:mb-12 md:grid-cols-2">
