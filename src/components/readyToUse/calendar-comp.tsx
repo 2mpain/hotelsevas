@@ -18,9 +18,11 @@ import {
 export function DatePickerWithRange({
   className,
 }: React.HTMLAttributes<HTMLDivElement>) {
+  const currentDate = new Date();
+
   const [date, setDate] = React.useState<DateRange | undefined>({
-    from: new Date(2023, 10, 6),
-    to: addDays(new Date(2023, 10, 9), 3),
+    from: currentDate,
+    to: addDays(currentDate, 3),
   });
 
   return (
@@ -58,7 +60,7 @@ export function DatePickerWithRange({
             selected={date}
             onSelect={setDate}
             numberOfMonths={2}
-           locale={ruLocale}
+            locale={ruLocale}
           />
         </PopoverContent>
       </Popover>
